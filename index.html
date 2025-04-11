@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Muhammad Noman Anwar - Chat Assistant</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="chat-container">
+        <header>
+            <h1>Muhammad Noman Anwar</h1>
+            <p>Your Personal Assistant</p>
+        </header>
+        
+        <div class="chat-area" id="chatArea">
+            <!-- Messages will appear here -->
+            <div class="message bot-message">
+                Hello! How can I assist you today?
+            </div>
+        </div>
+        
+        <div class="input-area">
+            <div class="media-controls">
+                <button id="cameraBtn" class="media-btn">📷 Camera</button>
+                <button id="micBtn" class="media-btn">🎤 Mic</button>
+                <button id="keypadBtn" class="media-btn">⌨ Keypad</button>
+            </div>
+            
+            <div class="text-input">
+                <input type="text" id="userInput" placeholder="Type your message...">
+                <button id="sendBtn">Send</button>
+            </div>
+            
+            <!-- Camera and mic preview areas -->
+            <div id="cameraPreview" class="hidden">
+                <video id="video" autoplay></video>
+                <button id="captureBtn">Capture</button>
+            </div>
+            
+            <div id="micPreview" class="hidden">
+                <p>Recording...</p>
+                <button id="stopRecordingBtn">Stop</button>
+            </div>
+            
+            <!-- Virtual keypad -->
+            <div id="virtualKeypad" class="hidden">
+                <div class="keypad">
+                    <button class="key">1</button>
+                    <button class="key">2</button>
+                    <button class="key">3</button>
+                    <button class="key">4</button>
+                    <button class="key">5</button>
+                    <button class="key">6</button>
+                    <button class="key">7</button>
+                    <button class="key">8</button>
+                    <button class="key">9</button>
+                    <button class="key">*</button>
+                    <button class="key">0</button>
+                    <button class="key">#</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
